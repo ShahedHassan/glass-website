@@ -32,10 +32,12 @@ main {
   justify-content: center;
 }
 
+
+/*changed glass' width to auto so it at least covers the screen*/
 .glass {
   background: white;
   min-height: 80vh;
-  width: 60%;
+  width: auto;
   background: linear-gradient(
     to right bottom,
     rgba(255, 255, 255, 0.7),
@@ -87,6 +89,7 @@ main {
   margin: 2rem 0rem;
   padding: 1rem 5rem;
   align-items: center;
+  max-width: 100%;
 }
 .link h2 {
   padding: 0rem 2rem;
@@ -180,4 +183,26 @@ main {
   background: linear-gradient(to right top, #65dfc9, #6cdbeb);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/*None of my media queries are working? But this is for tablet portrait and landscape mode*/
+/*was hoping to get the flex containers to wrap and become single column*/
+@media screen and (max-width:1060x) {
+  .main {
+    width:70%;
+  }
+  .dashboard {
+    flex: 50%;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .main {
+    width:100%;
+    height:100vh;
+  }
+  .dashboard {
+    flex: 50%;
+  }
+
 }
